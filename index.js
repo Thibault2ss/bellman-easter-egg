@@ -5,7 +5,7 @@
 
   var iframeId = "bellman-easter-egg";
   var html =
-    "https://cdn.jsdelivr.net/gh/Thibault2ss/bellman-easter-egg/nyan/index.html";
+    "https://cdn.jsdelivr.net/gh/Thibault2ss/bellman-easter-egg@latest/nyan/index.html";
   var l = "";
 
   const removeEasterEgg = () => {
