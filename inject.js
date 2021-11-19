@@ -4,8 +4,7 @@
   }
 
   var iframeId = "bellman-easter-egg";
-  var html =
-    "https://htmlpreview.github.io/?https://github.com/Thibault2ss/bellman-easter-egg/blob/main/nyan/index.html";
+  var html = "https://thibault2ss.github.io/bellman-easter-egg/";
   var audio = new Audio(
     "https://raw.githubusercontent.com/Thibault2ss/bellman-easter-egg/main/nyan/audio/nyan-cat.ogg"
   );
