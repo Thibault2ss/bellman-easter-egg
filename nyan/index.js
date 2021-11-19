@@ -50,24 +50,6 @@ $(function () {
   nyancat.init();
   sparks.init($(".sparks-combo"));
 
-  setTimeout(() => {
-    var audioElm = document.getElementById("song");
-    console.log("audioElm", audioElm);
-    console.log("audioElm.muted", audioElm.muted);
-    audioElm.play();
-    audioElm.muted = !audioElm.muted;
-    console.log("audioElm.muted", audioElm.muted);
-  }, 1000);
-
-  // console.log("audio");
-  // console.log("audio");
-
-  // var audio = new Audio(
-  //   "https://raw.githubusercontent.com/Thibault2ss/bellman-easter-egg/main/nyan/audio/nyan-cat.ogg"
-  // );
-  // console.log("audio");
-  // audio.play();
-
   var timer = setInterval(function () {
     nyancat.cycleFrames();
   }, 70);

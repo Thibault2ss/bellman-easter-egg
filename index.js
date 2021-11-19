@@ -33,7 +33,7 @@
         iframeId +
         '" src="' +
         html +
-        '" style="border:0;width:100vw;height:100vh;position:fixed;top:0;z-index:1337" allowtransparency="true"></iframe>';
+        '" style="border:0;width:100vw;height:100vh;position:fixed;top:0;z-index:1337;pointer-events:none;" allowtransparency="true"></iframe>';
       audio.play();
 
       removeEasterEggTimeout = setTimeout(removeEasterEgg, 60000);
