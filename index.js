@@ -6,15 +6,22 @@
   var iframeId = "bellman-easter-egg";
   var html =
     "https://htmlpreview.github.io/?https://github.com/Thibault2ss/bellman-easter-egg/blob/main/nyan/index.html";
+  var audio = new Audio(
+    "https://raw.githubusercontent.com/Thibault2ss/bellman-easter-egg/main/nyan/audio/nyan-cat.ogg"
+  );
+  var removeEasterEggTimeout = "";
   var l = "";
 
   const removeEasterEgg = () => {
     const iframe = document.getElementById(iframeId);
+    audio.pause();
+    audio.currentTime = 0;
 
-    console.log("iframe", iframe);
     if (iframe) {
       iframe.remove();
     }
+
+    clearTimeout(removeEasterEggTimeout);
   };
 
   const showEasterEgg = () => {
@@ -27,16 +34,23 @@
         '" src="' +
         html +
         '" style="border:0;width:100vw;height:100vh;position:fixed;top:0;z-index:1337" allowtransparency="true"></iframe>';
+      audio.play();
 
-      setTimeout(removeEasterEgg, 3000);
+      removeEasterEggTimeout = setTimeout(removeEasterEgg, 60000);
     }
   };
 
   const onKeyDown = (event) => {
+    if (event.key === "Escape") {
+      removeEasterEgg();
+      l = "";
+      return;
+    }
+
     l += event.key;
+
     if (l.indexOf(code) !== -1) {
       l = "";
-      console.log("triggered");
       showEasterEgg();
     }
   };
